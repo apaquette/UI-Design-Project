@@ -1,4 +1,5 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@rendermode InteractiveServer
+@* <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">WellnessWorks</a>
     </div>
@@ -26,5 +27,99 @@
             </NavLink>
         </div>
     </nav>
-</div>
+</div> *@
 
+<style>
+    .primary-color{
+        background-color: #5D00F4;
+    }
+        .primary-color .tone-1{
+            background-color: #6A24DB;
+        }
+
+        .primary-color .tone-2 {
+            background-color: #7647C1;
+        }
+
+        .primary-color .tone-3 {
+            background-color: #826BA8;
+        }
+
+    .secondary-color{
+        background-color: #00C2A8;
+    }
+
+        .secondary-color .tone-1 {
+            background-color: #24B5A2;
+        }
+
+        .secondary-color .tone-2 {
+            background-color: #47A89B;
+        }
+
+        .secondary-color .tone-3 {
+            background-color: #6B9C95;
+        }
+    .nav-btn{
+        color: white;
+        background-color: #6A24DB;
+        margin-bottom: 10px !important;
+        
+    }
+        .nav-btn:hover{
+            color: white !important;
+            background-color: #826BA8;
+        }
+
+        .active:hover{
+            color: white;
+            background-color: #24B5A2;
+        }
+
+    .rz-navigation-item-text{
+        color: white;
+    }
+
+    .rz-profile-menu{
+        background-color: #6A24DB !important;
+    }
+
+    :root{
+        --rz-panel-menu-item-active-color: white;
+        --rz-panel-menu-item-active-background-color: #6B9C95;
+        --rz-layout-background-color: #C6C6C6;
+    }
+
+</style>
+
+<RadzenHeader Style="position: relative;" class="primary-color">
+    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Start" Gap="0">
+            <RadzenSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" />
+            <RadzenText TextStyle="TextStyle.H6" Text="Wellness Works" class="text-white" />
+        </RadzenStack>
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End">
+            <RadzenProfileMenu class="secondary-color">
+                <Template>
+                    <RadzenIcon Icon="account_circle" />
+                </Template>
+                <ChildContent>
+                    <RadzenProfileMenuItem Text="Settings"Icon="settings" />
+                    <RadzenProfileMenuItem Text="Logout" Icon="logout" />
+                </ChildContent>
+            </RadzenProfileMenu>
+        </RadzenStack>
+    </RadzenStack>
+</RadzenHeader>
+<RadzenSidebar Responsive="false" Style="width: max-content;" class="secondary-color">
+    <RadzenPanelMenu DisplayStyle="@(sidebarExpanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)" ShowArrow="false" class="secondary-color" >
+        <RadzenPanelMenuItem Path="/" Text="Home" Icon="home" IconColor="white" class="nav-btn fw-bold" />
+        <RadzenPanelMenuItem Path="/nutrition" Text="Nutrition" Icon="restaurant" IconColor="white" class="nav-btn fw-bold" />
+        <RadzenPanelMenuItem Path="/fitness" Text="Fitness" Icon="fitness_center" IconColor="white" class="nav-btn fw-bold" />
+        <RadzenPanelMenuItem Path="/health" Text="Health" Icon="heart_broken" IconColor="white" class="nav-btn fw-bold" />
+    </RadzenPanelMenu>
+</RadzenSidebar>
+
+@code{
+    bool sidebarExpanded = true;
+}
