@@ -1,0 +1,31 @@
+﻿<style>
+    .circle-container {
+        width: 200px; /* Adjust the width and height to change the size of the circle */
+        height: 200px;
+        border-radius: 50%; /* This makes the container circular */
+        background-color: var(--secondary-color); /* Background color of the circle */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<div class="circle-container" style="@Style">
+    <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Start" Gap="0">
+        <RadzenText Text="@TopText" Style="@TopText_Style" class="fw-bold text-black" TextAlign="TextAlign.Center" />
+        <RadzenText Text="@BottomText" Style="@BottomText_Style" TextAlign="TextAlign.Center" class="fw-bold text-black" />
+    </RadzenStack>
+</div>
+
+@code{
+    [Parameter]
+    public string TopText { get; set; } = "";
+    [Parameter]
+    public string TopText_Style { get; set; } = "";
+    [Parameter]
+    public string BottomText { get; set; } = "";
+    [Parameter]
+    public string BottomText_Style { get; set; } = "";
+    [Parameter]
+    public string Style { get; set; } = "";
+}

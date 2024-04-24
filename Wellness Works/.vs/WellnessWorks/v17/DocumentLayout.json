@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Wellness Works\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|d:\\setu\\semester 2\\ui_ux design\\ui-design-project\\wellness works\\components\\pages\\health.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|solutionrelative:components\\pages\\health.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|d:\\setu\\semester 2\\ui_ux design\\ui-design-project\\wellness works\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Health.razor",
-              "DocumentMoniker": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Wellness Works\\Components\\Pages\\Health.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Health.razor",
-              "ToolTip": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Wellness Works\\Components\\Pages\\Health.razor",
-              "RelativeToolTip": "Components\\Pages\\Health.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAACIAAAA",
+              "Title": "Home.razor",
+              "DocumentMoniker": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Wellness Works\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Wellness Works\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-24T17:59:55.475Z",
+              "WhenOpened": "2024-04-24T18:14:10.51Z",
               "EditorCaption": ""
             }
           ]
