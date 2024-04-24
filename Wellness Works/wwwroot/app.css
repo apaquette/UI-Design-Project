@@ -49,3 +49,52 @@ h1:focus {
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
+
+
+/*My additions*/
+.nav-btn {
+    color: white;
+    background-color: var(--primary-color-tone-1);
+    margin-bottom: 10px !important;
+}
+
+    .nav-btn:hover {
+        color: white !important;
+        background-color: var(--primary-color-tone-3);
+    }
+
+.reg-btn:hover {
+    background-color: var(--secondary-color-tone-3) !important;
+}
+
+
+.act-btn:hover {
+    background-color: var(--primary-color-tone-3) !important;
+}
+/*Radzen Mods*/
+.rz-navigation-item-text {
+    color: white;
+}
+
+.rz-profile-menu {
+    background-color: var(--primary-color-tone-1) !important;
+}
+
+
+.nav-btn .rz-navigation-item-wrapper-active{
+    background-color: var(--secondary-color) !important;
+}
+/*variables*/
+:root {
+    --primary-color: #5D00F4;
+    --primary-color-tone-1: #6A24DB;
+    --primary-color-tone-2: #7647C1;
+    --primary-color-tone-3: #826BA8;
+    --secondary-color: #00C2A8;
+    --secondary-color-tone-1: #24B5A2;
+    --secondary-color-tone-2: #47A89B;
+    --secondary-color-tone-3: #6B9C95;
+    --rz-panel-menu-item-active-color: white;
+    --rz-panel-menu-item-active-background-color: #6B9C95;
+    --rz-layout-background-color: #C6C6C6;
+}

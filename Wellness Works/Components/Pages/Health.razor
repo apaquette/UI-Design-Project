@@ -1,5 +1,22 @@
 ﻿@page "/health"
 
+@using WellnessWorks.Components.Modular_Components
+
 <PageTitle>Health</PageTitle>
 
-<h1>Health</h1>
+<RadzenCard Style="padding: 0; min-height: 80vh; max-height: 100vh; border: 5px solid black;" >
+    <RadzenHeader Style="padding-top: 10px; padding-bottom: 10px; position: relative; min-width: 70vw; padding-left: 2vw; padding-right: 2vw;">
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Start">
+            <RadzenText Text="Health" TextStyle="TextStyle.H4" class="text-white"  />
+        </RadzenStack>
+    </RadzenHeader>
+
+    <RadzenStack Style="margin-top: 50px; margin-left: 50px; margin-right: 50px; height: 50vh;" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Gap="100px" Wrap="FlexWrap.Wrap">
+        <CircleContainer TopText="60" TopText_Style="font-size: 65px;" BottomText="Heart Rate" BottomText_Style="font-size: 18px;" />
+        <CircleContainer TopText="80" TopText_Style="font-size: 65px;" BottomText="Blood Glucose" BottomText_Style="font-size: 18px;" />
+        <CircleContainer TopText="37" TopText_Style="font-size: 65px;" BottomText="Body Tempearture" BottomText_Style="font-size: 18px;" />
+        <CircleContainer TopText="78" TopText_Style="font-size: 65px;" BottomText="Blood Pressure" BottomText_Style="font-size: 18px;" />
+        <CircleContainer TopText="98" TopText_Style="font-size: 65px;" BottomText="Oxygen Saturation" BottomText_Style="font-size: 18px;" />
+        <CircleContainer TopText="7.5" TopText_Style="font-size: 65px;" BottomText="Hours Asleep" BottomText_Style="font-size: 18px;" />
+    </RadzenStack>
+</RadzenCard>

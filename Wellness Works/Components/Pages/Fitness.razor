@@ -1,5 +1,78 @@
 ﻿@page "/fitness"
 
+@rendermode InteractiveServer
+
+@inject DialogService DiagloService
+
+@using WellnessWorks.Components.Modular_Components
+
+
 <PageTitle>Fitness</PageTitle>
 
-<h1>Fitness</h1>
+<RadzenCard Style="padding: 0; min-height: 80vh; border: 5px solid black;">
+    <RadzenHeader Style="padding-top: 10px; padding-bottom: 10px; position: relative; min-width: 70vw; padding-left: 2vw; padding-right: 2vw;">
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+            <RadzenText Text="Fitness" TextStyle="TextStyle.H4" class="text-white" />
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End">
+                <RadzenButton Text="View Plans" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenButton Text="Set Goals" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenButton Text="Log Proportions" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenButton Text="Create Workout" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenButton Text="Start Workout" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenDatePicker @bind-Value=@value DateFormat="ddd, dd MMM yyyy" Name="DatePickerDateOnlyType" Style="width: 200px;" />
+            </RadzenStack>
+        </RadzenStack>
+    </RadzenHeader>
+    <RadzenStack style="margin: 15px; height: 60vh;" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.SpaceAround">
+        <CircleContainer TopText="304" TopText_Style="font-size: 65px;" BottomText_Style="font-size: 18px;" BottomText="Calories Burned" />
+        <RadzenScheduler style="height: 400px; width: 300px;" TItem="Appointment" Data=@Appointments StartProperty="Start" EndProperty="End"
+                            TextProperty="Text" SelectedIndex="0">
+            <RadzenMonthView />
+        </RadzenScheduler>
+        <RadzenDataGrid Data="@RecoveryStats" TItem="Recovery" Style="width: 350px; height: 400px;">
+            <Columns>
+                <RadzenDataGridColumn Property="MuscleGroup" Title="Muscle Group" />
+                <RadzenDataGridColumn Property="RecoveryRate" Title="Recovery Rate" TextAlign="TextAlign.Center">
+                    <Template>
+                        @((int)(context.RecoveryRate * 100))%
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn Property="RecoveryTime" Title="Recovery Time" TextAlign="TextAlign.Center" />
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenStack>
+</RadzenCard>
+
+@code {
+    private DateOnly value = DateOnly.FromDateTime(DateTime.Today);
+    List<Appointment> Appointments { get; set; } = new(){
+        new() { Start = DateTime.Today.AddDays(-2), End = DateTime.Today.AddDays(-2), Text = "Push Day" },
+        new() { Start = DateTime.Today.AddDays(-3), End = DateTime.Today.AddDays(-3), Text = "Leg Day" },
+        new() { Start = DateTime.Today, End = DateTime.Today, Text = "Pull Day" }
+    };
+    List<Recovery> RecoveryStats = new() {
+        new() {MuscleGroup = "Chest"},
+        new() {MuscleGroup = "Shoulders"},
+        new() {MuscleGroup = "Triceps"},
+        new() {MuscleGroup = "Back"},
+        new() {MuscleGroup = "Biceps"},
+        new() {MuscleGroup = "Forearms"},
+        new() {MuscleGroup = "Core"},
+        new() {MuscleGroup = "Glutes"},
+        new() {MuscleGroup = "Upper Leg"},
+        new() {MuscleGroup = "Lower Leg"},
+    };
+
+    private class Appointment {
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
+
+        public string Text { get; set; }
+    }
+
+    private class Recovery {
+        public string? MuscleGroup { get; set; }
+        public decimal RecoveryRate { get; set; } = 1.0m;
+        public decimal RecoveryTime { get; set; } = 0;
+    }
+}

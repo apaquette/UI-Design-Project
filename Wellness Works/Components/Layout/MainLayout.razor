@@ -1,13 +1,15 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
 
 <RadzenLayout>
-        <NavMenu />
+        @if(NavigationManager.Uri != "https://localhost:7242/") {
+            <NavMenu />
+        }
         <RadzenBody>
-            <div class="rz-p-4">
                 <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
                     @Body
                 </RadzenStack>
-            </div>
         </RadzenBody>
 </RadzenLayout>
 
