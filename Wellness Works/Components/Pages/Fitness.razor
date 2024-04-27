@@ -23,12 +23,13 @@
             </RadzenStack>
         </RadzenStack>
     </RadzenHeader>
-    <RadzenStack style="margin: 15px; height: 60vh;" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.SpaceAround">
-        <CircleContainer TopText="304" TopText_Style="font-size: 65px;" BottomText_Style="font-size: 18px;" BottomText="Calories Burned" />
+    
+    <RadzenStack style="margin: 15px; height: 60vh;" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceAround">
         <RadzenScheduler style="height: 400px; width: 300px;" TItem="Appointment" Data=@Appointments StartProperty="Start" EndProperty="End"
                             TextProperty="Text" SelectedIndex="0">
             <RadzenMonthView />
         </RadzenScheduler>
+        <CircleContainer TopText="304" TopText_Style="font-size: 65px;" BottomText_Style="font-size: 18px;" BottomText="Calories Burned" Style="width: 300px; height: 300px;" />
         <RadzenDataGrid Data="@RecoveryStats" TItem="Recovery" Style="width: 350px; height: 400px;">
             <Columns>
                 <RadzenDataGridColumn Property="MuscleGroup" Title="Muscle Group" />

@@ -3,7 +3,7 @@
 
 
 <RadzenLayout>
-        @if(NavigationManager.Uri != "https://localhost:7242/") {
+    @if (NavigationManager.Uri != "https://localhost:7242/" && NavigationManager.Uri != "https://localhost:7242/survey") {
             <NavMenu />
         }
         <RadzenBody>
