@@ -1,0 +1,76 @@
+﻿@rendermode InteractiveServer
+
+<style>
+    .primary-color{
+        background-color: var(--primary-color);
+    }
+        .primary-color .tone-1{
+            background-color: var(--primary-color-tone-1);
+        }
+
+        .primary-color .tone-2 {
+            background-color: var(--primary-color-tone-2);
+        }
+
+        .primary-color .tone-3 {
+            background-color: var(--primary-color-tone-3);
+        }
+
+    .secondary-color{
+        background-color: var(--secondary-color);
+    }
+
+        .secondary-color .tone-1 {
+            background-color: var(--secondary-color-tone-1);
+        }
+
+        .secondary-color .tone-2 {
+            background-color: var(--secondary-color-tone-2);
+        }
+
+        .secondary-color .tone-3 {
+            background-color: var(--secondary-color-tone-3);
+        }
+
+    .nav-btn .active:hover {
+        color: white;
+        background-color: var(--secondary-color-tone-3);
+    }
+
+    
+
+</style>
+
+<RadzenHeader Style="position: relative;" class="primary-color">
+    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Start" Gap="0">
+            <RadzenSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" />
+                <a href="/home">
+                    <RadzenText TextStyle="TextStyle.H6" Text="Wellness Works" class="text-white" />
+                </a>
+        </RadzenStack>
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End">
+            <RadzenProfileMenu class="secondary-color">
+                <Template>
+                    <RadzenIcon Icon="account_circle" />
+                </Template>
+                <ChildContent>
+                    <RadzenProfileMenuItem Text="Settings"Icon="settings" Path="/settings" />
+                    <RadzenProfileMenuItem Text="Logout" Icon="logout" Path="/" />
+                </ChildContent>
+            </RadzenProfileMenu>
+        </RadzenStack>
+    </RadzenStack>
+</RadzenHeader>
+<RadzenSidebar Responsive="false" Style="width: max-content;" class="secondary-color">
+    <RadzenPanelMenu DisplayStyle="@(sidebarExpanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)" ShowArrow="false" class="secondary-color" >
+        <RadzenPanelMenuItem Path="/home" Text="Home" Icon="home" IconColor="white" class="nav-btn fw-bold" />
+        <RadzenPanelMenuItem Path="/nutrition" Text="Nutrition" Icon="restaurant" IconColor="white" class="nav-btn fw-bold" />
+        <RadzenPanelMenuItem Path="/fitness" Text="Fitness" Icon="fitness_center" IconColor="white" class="nav-btn fw-bold" />
+        <RadzenPanelMenuItem Path="/health" Text="Health" Icon="favorite" IconColor="white" class="nav-btn fw-bold" />
+    </RadzenPanelMenu>
+</RadzenSidebar>
+
+@code{
+    bool sidebarExpanded = false;
+}

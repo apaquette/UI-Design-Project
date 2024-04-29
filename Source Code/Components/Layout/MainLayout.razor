@@ -1,0 +1,35 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+
+<RadzenLayout>
+    @{
+        string location = GetTextAfterSlash(NavigationManager.Uri);
+        if(location != "" && location != "survey") {
+            <NavMenu />
+        }
+    }
+        <RadzenBody>
+                <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
+                    @Body
+                </RadzenStack>
+        </RadzenBody>
+</RadzenLayout>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+@code{
+    static string GetTextAfterSlash(string url) {
+        int lastSlashIndex = url.LastIndexOf('/');
+        if (lastSlashIndex != -1 && lastSlashIndex < url.Length - 1) {
+            return url.Substring(lastSlashIndex + 1);
+        }
+        else {
+            return string.Empty;
+        }
+    }
+}

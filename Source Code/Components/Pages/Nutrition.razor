@@ -1,0 +1,90 @@
+﻿@page "/nutrition"
+
+@rendermode InteractiveServer
+
+@inject NavigationManager NavigationManager
+
+@using WellnessWorks.Components.Modular_Components
+
+<PageTitle>Wellness Works | Nutrition</PageTitle>
+
+<RadzenCard Style="padding: 0; min-height: 80vh; border: 5px solid black;">
+    <RadzenHeader Style="padding-top: 10px; padding-bottom: 10px; position: relative; min-width: 70vw; padding-left: 2vw; padding-right: 2vw;">
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+            <RadzenText Text="Nutrition" TextStyle="TextStyle.H4" class="text-white"  />
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End">
+                <RadzenButton Text="Meal Plans" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenButton Text="Set Goals" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenButton Text="Create Meal" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenButton Text="Log Water" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenButton Text="Log Food" class="reg-btn" Style="background-color: var(--secondary-color-tone-1);" />
+                <RadzenDatePicker @bind-Value=@value DateFormat="ddd, dd MMM yyyy" Name="DatePickerDateOnlyType" Style="width: 200px;" />
+            </RadzenStack>
+        </RadzenStack>
+    </RadzenHeader>
+    <div style="margin: 15px;">
+        <RadzenColumn>
+            <RadzenRow AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
+                <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap">
+                    <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
+                        <CircleContainer TopText="2247" TopText_Style="font-size: 65px;" BottomText="Calories" BottomText_Style="font-size: 22px; margin-top: -20px;" />
+                        <CircleContainer TopText="53" TopText_Style="color: white !important; font-size: 22px;" BottomText="Remaining" BottomText_Style="color: white !important; font-size: 12px; margin-top: -5px;" Style="background-color: var(--primary-color); width: 80px; height: 80px; margin-top: -50px;" />
+                    </RadzenStack>
+                    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap">
+                        <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
+                            <CircleContainer TopText="213.9g" TopText_Style="font-size: 32px;" BottomText="Carbs" BottomText_Style="font-size: 18px; margin-top: -10px;" Style="width: 120px; height: 120px;" />
+                            <CircleContainer TopText="36.1g" TopText_Style="color: white !important; font-size: 16px;" BottomText="Remaining" BottomText_Style="color: white !important; font-size: 12px; margin-top: -5px;" Style="background-color: var(--primary-color); width: 90px; height: 55px; margin-top: -40px;" />
+                        </RadzenStack>
+
+                        <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
+                            <CircleContainer TopText="82.2g" TopText_Style="font-size: 32px;" BottomText="Fat" BottomText_Style="font-size: 18px; margin-top: -10px;" Style="width: 120px; height: 120px;" />
+                            <CircleContainer TopText="2.2g" TopText_Style="color: white !important; font-size: 16px;" BottomText="Excess" BottomText_Style="color: white !important; font-size: 12px; margin-top: -5px;" Style="background-color: var(--primary-color); width: 90px; height: 55px; margin-top: -40px;" />
+                        </RadzenStack>
+
+                        <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
+                            <CircleContainer TopText="155.1g" TopText_Style="font-size: 32px;" BottomText="Protein" BottomText_Style="font-size: 18px; margin-top: -10px;" Style="width: 120px; height: 120px;" />
+                            <CircleContainer TopText="5.1g" TopText_Style="color: white !important; font-size: 16px;" BottomText="Excess" BottomText_Style="color: white !important; font-size: 12px; margin-top: -5px;" Style="background-color: var(--primary-color); width: 90px; height: 55px; margin-top: -40px;" />
+                        </RadzenStack>
+
+                        <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
+                            <CircleContainer TopText="0.7L" TopText_Style="font-size: 32px;" BottomText="Water" BottomText_Style="font-size: 18px; margin-top: -10px;" Style="width: 120px; height: 120px;" />
+                            <CircleContainer TopText="1.3L" TopText_Style="color: white !important; font-size: 16px;" BottomText="Remaining" BottomText_Style="color: white !important; font-size: 12px; margin-top: -5px;" Style="background-color: var(--primary-color); width: 90px; height: 55px; margin-top: -40px;" />
+                        </RadzenStack>
+                    </RadzenStack>
+                </RadzenStack>
+            </RadzenRow>
+            <RadzenRow AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Style="margin-top: 30px;">
+                <RadzenDataGrid @bind-Data="@gridContent" Style="width: 70vw;">
+                    <Columns>
+                        <RadzenDataGridColumn Property="Category" Title="" TextAlign="TextAlign.Left" />
+                        <RadzenDataGridColumn Property="Calories" Title="Calories" TextAlign="TextAlign.Center" />
+                        <RadzenDataGridColumn Property="Carbs" Title="Carbs" TextAlign="TextAlign.Center" />
+                        <RadzenDataGridColumn Property="Fat" Title="Fat" TextAlign="TextAlign.Center" />
+                        <RadzenDataGridColumn Property="Protein" Title="Protein" TextAlign="TextAlign.Center" />
+                    </Columns> 
+                </RadzenDataGrid>
+            </RadzenRow>
+        </RadzenColumn>
+    </div>
+</RadzenCard>
+
+@code{
+    private DateOnly value = DateOnly.FromDateTime(DateTime.Today);
+    private List<GridContent> gridContent = new();
+
+    protected override void OnInitialized() {
+        gridContent.Add(new() { Category = "Breakfast", Calories = 0, Carbs = 0, Fat = 0, Protein = 0 });
+        gridContent.Add(new() { Category = "Lunch", Calories = 1282, Carbs = 35.5m+42+42, Fat = 40+16+8, Protein = 40+3+8});
+        gridContent.Add(new() { Category = "Dinner", Calories = 604, Carbs = 1.1m+46+5.1m+2+9.6m, Fat = 8.2m+1+0.1m+1.4m, Protein = 50.4m+9.1m+0.6m+0.4m+1.6m });
+        gridContent.Add(new() { Category = "Snacks", Calories = 361, Carbs = 1.8m+28.8m, Fat = 1.5m+6, Protein = 21+21 });
+        gridContent.Add(new() { Category = "Total", Calories = 2247, Carbs = 119.5m + 63.8m + 30.6m, Fat = 64 + 10.7m + 7.5m, Protein = 51 + 62.1m + 42 });
+    }
+
+    private class GridContent{
+        public string? Category { get; set; }
+        public int Calories { get; set; }
+        public decimal Carbs { get; set; }
+        public decimal Fat { get; set; }
+        public decimal Protein { get; set; }
+    }
+}

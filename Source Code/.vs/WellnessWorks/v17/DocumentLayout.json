@@ -1,0 +1,138 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|d:\\setu\\semester 2\\ui_ux design\\ui-design-project\\source code\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|d:\\setu\\semester 2\\ui_ux design\\ui-design-project\\source code\\components\\pages\\settings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|solutionrelative:components\\pages\\settings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\components\\pages\\fitness.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|solutionrelative:components\\pages\\fitness.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\components\\pages\\health.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|solutionrelative:components\\pages\\health.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\components\\pages\\nutrition.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|solutionrelative:components\\pages\\nutrition.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6162B32D-C73B-4D34-8150-C04D959BC691}|WellnessWorks.csproj|solutionrelative:components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1143,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T16:59:22.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Settings.razor",
+              "DocumentMoniker": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Settings.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Settings.razor",
+              "ToolTip": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Settings.razor",
+              "RelativeToolTip": "Components\\Pages\\Settings.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T13:49:11.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.razor",
+              "DocumentMoniker": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T13:47:45.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.razor",
+              "DocumentMoniker": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Login.razor",
+              "ToolTip": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "Components\\Pages\\Login.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T13:47:37.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Nutrition.razor",
+              "DocumentMoniker": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Nutrition.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Nutrition.razor",
+              "ToolTip": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Nutrition.razor",
+              "RelativeToolTip": "Components\\Pages\\Nutrition.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T13:23:39.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Health.razor",
+              "DocumentMoniker": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Health.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Health.razor",
+              "ToolTip": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Health.razor",
+              "RelativeToolTip": "Components\\Pages\\Health.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T13:08:46.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Fitness.razor",
+              "DocumentMoniker": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Fitness.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Fitness.razor",
+              "ToolTip": "D:\\SETU\\Semester 2\\UI_UX Design\\UI-Design-Project\\Source Code\\Components\\Pages\\Fitness.razor",
+              "RelativeToolTip": "Components\\Pages\\Fitness.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T13:18:14.511Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
